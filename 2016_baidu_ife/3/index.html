@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			padding: 20px;
+		}
+		.container{
+			border: 1px solid #999;
+			background: #eee;
+			padding: 20px;
+			display: flex;
+			overflow: auto;
+		}
+		.left{
+			width: 200px;
+			border: 1px solid #999;
+			background: white;
+			float: left;
+			padding: 20px;
+			/*display: flex;*/
+			/*align-content: flex-start;*/
+		}
+		.logo{
+			width: 80px;
+			height: 80px;
+			border: 1px solid #999;
+			float: left;
+			/*position: absolute;*/
+		}
+		.name{
+			width: 180px;
+			text-align: center;
+		}
+		.middle{
+			border: 1px solid #999;
+			background: white;
+			/*flex-grow: 1;*/
+			padding: 20px;
+			margin: 0 20px;
+		}
+		.right{
+			width: 120px;
+			border: 1px solid #999;
+			background: white;
+			padding: 20px;
+			
+		}
+		.right > div{
+			width: 80px;
+			height: 80px;
+			border: 1px solid #999;
+			margin-bottom: 20px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left">
+			<img class="logo" src="icon.png" alt="" width="80px" height="80px">
+			<div class="name">红鲤鱼与绿鲤鱼与驴队</div>
+		</div>
+		<div class="middle">
+			<h1>红鲤鱼与绿鲤鱼与驴队</h1>
+			<h2>团队介绍</h2>
+			<p>我们是来自黑龙江大学计算机科学计算学院软件学院大二，大一的同学，身为学长的我带领着四个学妹 参加了这次百度前端技术学院。我自己的方向是后台的JavaEE，但是想通过参加这次技术培训，多学习些前端的知识(顺便还能带带学妹们╭(●｀∀´●)╯)，其他队友都是刚开始学习前端，正好可以 通过这次0基础地学习，系统地学习前端知识~~</p>
+			<h2>队员介绍</h2>
+			<p>有时间再更新哈╭(′▽`)╭(′▽`)╯</p>
+		</div>
+		<div class="right">
+			<div class="pic"><img src="icon.png" alt=""></div>
+			<div class="pic"><img src="icon.png" alt=""></div>
+			<div class="pic"><img src="icon.png" alt=""></div>
+			<div class="pic"><img src="icon.png" alt=""></div>
+		</div>
+	</div>
+</body>
+</html>

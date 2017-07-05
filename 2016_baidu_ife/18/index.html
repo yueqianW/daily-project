@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#container div{
+			background: red;
+			color: white;
+			font-size: 30px;
+			text-align: center;
+			padding: 0 15px;
+			margin: 10px 0;
+			margin-right: 10px;
+			line-height: 50px;
+			width: 30px;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var otxt=document.getElementById('txt');
+			var show=document.getElementById('show');
+			var obtn1=document.getElementById('btn1');
+			var obtn2=document.getElementById('btn2');
+			var obtn3=document.getElementById('btn3');
+			var obtn4=document.getElementById('btn4');
+
+			obtn1.onclick=function(){
+				show.innerHTML=otxt.value;
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn1" value="左侧入">
+	<input type="button" id="btn2" value="右侧入" style="margin-right:25px;">
+	<input type="button" id="btn3" value="左侧出">
+	<input type="button" id="btn4" value="右侧出">
+
+	<div id="container">
+		<div id="show">
+			
+		</div>
+	</div>
+</body>
+</html>

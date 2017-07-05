@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+		}
+		.container div{
+			width: 150px;
+			border: 1px solid red;
+			margin-bottom: 20px;
+		}
+		.item1{
+			height: 150px;
+		}
+		.item2{
+			height: 100px;
+		}
+		.item3{
+			height: 40px;
+		}
+		.item4{
+			height: 200px;
+			border: 1px solid blue!important;
+		}
+		@media all and (max-width: 640px){
+			.container{
+				flex-wrap: wrap;
+				align-items: flex-start;
+			}
+			.item4{
+				order: -1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item1">1</div>
+		<div class="item2">2</div>
+		<div class="item3">3</div>
+		<div class="item4">4</div>
+	</div>
+</body>
+</html>

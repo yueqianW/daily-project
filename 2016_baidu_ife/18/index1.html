@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{
+			list-style: none;
+			float: left;
+			background: red;
+			font-size: 30px;
+			cursor: pointer;
+			text-align: center;
+			line-height: 30px;
+			width: 30px;
+			color: white;
+			padding: 2px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="ctrl">
+		<input type="text" id="screen">
+		<input type="button" class="btn" value="左侧入">
+		<input type="button" class="btn" value="右侧入">
+		<input type="button" class="btn" value="左侧出">
+		<input type="button" class="btn" value="右侧出">
+	</div>
+	<div class="box">
+		<ul></ul>
+	</div>
+	<script>
+		var screen=document.getElementById('screen');
+		var btn=document.getElementsByClassName('btn');
+		var ul=document.getElementsByTagName('ul')[0];
+
+		btn[0].onclick=function(){
+			if(screen.value.length==0){
+				alert('输入为空，请重新输入');
+				return false;
+			}
+
+			var newNode=document.createElement('li');
+			newNode.innerHTML=screen.value;
+			ul.insertBefore(newNode,ul.firstChild);
+			screen.value=null;
+		}
+
+		btn[1].onclick=function(){
+			if(screen.value.length==0){
+				alert('输入为空，请重新输入');
+				return false;
+			}
+
+			var newNode=document.createElement('li');
+			newNode.innerHTML=screen.value;
+			ul.appendChild(newNode);
+			screen.value=null;
+		}
+
+		btn[2].onclick=function(){
+			if(ul.hasChildNodes()){
+				alert(ul.firstChild.innerHTML);
+				ul.removeChild(ul.firstChild);
+			}else{
+				alert('列队为空');
+				return false;
+			}
+		}
+
+		btn[3].onclick=function(){
+			if(ul.hasChildNodes()){
+				alert(ul.lastChild.innerHTML);
+				ul.removeChild(ul.lastChild);
+			}else{
+				alert('列队为空');
+				return false;
+			}
+		}
+
+		ul.onmouseover=function(){
+			var li=ul.getElementsByTagName('li');
+			for(var i in li){
+				li[i].index=i;
+				li[i].onclick=function(){
+					ul.removeChild(ul.ChildNodes[this.index]);
+				}
+			}
+		}
+	</script>
+</body>
+</html>
